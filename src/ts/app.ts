@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 import { fileURLToPath } from "url";
-import { dirname } from "path";
+import { dirname, join as pathJoin} from "path";
 import bodyParser from "body-parser";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -19,7 +19,7 @@ const aboutContent = "Hac habitasse platea dictumst vestibulum rhoncus est pelle
 const contactContent = "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
 
 app.get("/", (req: Request, res: Response) => {
-
+  res.render("home");
 });
 
 app.post("/", (req: Request, res: Response) => {
