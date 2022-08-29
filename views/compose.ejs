@@ -1,0 +1,10 @@
+<%-include("partials/header")  %>
+<h2 class="mb-4 mt-2">Compose</h2>
+<form method="post" action="/compose">
+  <label class="d-block text-muted h5" for="postTitle">Title</label>
+  <input class="form-control mb-2" type="text" name="postTitle" autocomplete="off">
+  <label class="d-block text-muted h5" for="postBody">Post</label>
+  <textarea style="height: 40vh" class="form-control mb-3" type="text" name="postBody"></textarea>
+  <button class="btn btn-primary btn-lg" type="submit">Publish</button>
+</form>
+<%-include("partials/footer")%>
