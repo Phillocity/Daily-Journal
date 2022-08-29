@@ -5,7 +5,7 @@
 <% posts.forEach(post => { %>
 <a class="text-reset" href="/posts/<%=post.title.trim().replace(/\s+/g, '-').toLowerCase() %>">
   <h2><%= post.title %></h2>
-  <p><%= post.body %></p></a>
+  <p><%= `${post.body.slice(0, 350)}...` %></p></a>
 <% }) %>
 
 <%-include("partials/footer")  %>

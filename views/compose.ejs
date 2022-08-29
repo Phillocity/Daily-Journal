@@ -5,6 +5,9 @@
   <input class="form-control mb-2" type="text" name="postTitle" autocomplete="off">
   <label class="d-block text-muted h5" for="postBody">Post</label>
   <textarea style="height: 40vh" class="form-control mb-3" type="text" name="postBody"></textarea>
-  <button class="btn btn-primary btn-lg" type="submit">Publish</button>
+  <div class="d-flex justify-content-between">
+    <button class="btn btn-primary btn-lg">Back</button>
+    <button class="btn btn-primary btn-lg" type="submit">Publish</button>
+  </div>
 </form>
 <%-include("partials/footer")%>
