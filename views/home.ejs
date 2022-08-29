@@ -3,21 +3,9 @@
 <p><%= homeContent %> </p>
 
 <% posts.forEach(post => { %>
-    <h2><%= post.title %></h2>
-    <p><%= post.body %></p>
+<a class="text-reset" href="/posts/<%=post.title.trim().replace(/\s+/g, '-').toLowerCase() %>">
+  <h2><%= post.title %></h2>
+  <p><%= post.body %></p></a>
 <% }) %>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <%-include("partials/footer")  %>

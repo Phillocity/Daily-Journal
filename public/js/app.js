@@ -2,6 +2,7 @@ import express from "express";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
 import bodyParser from "body-parser";
+import lodash from "lodash";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 const app = express();
@@ -33,4 +34,9 @@ app.post("/compose", (req, res) => {
     };
     posts.push(post);
     res.redirect("/");
+});
+app.get("/posts/:postID", (req, res) => {
+    const requestedPost = req.params.postID;
+    const { title, body } = posts.find(post => lodash.lowerCase(post.title) === lodash.lowerCase(requestedPost));
+    res.render("post", { postData: { title, body } });
 });

@@ -1,6 +1,14 @@
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
+}
+
+a:hover,
+a:visited,
+a:link,
+a:active {
+  text-decoration: none;
 }
 
 .container-fluid {
@@ -9,7 +17,7 @@ html, body {
 }
 
 .container.body-container {
-  min-height: 78.5vh;
+  min-height: 80vh;
 }
 
 .navbar {
